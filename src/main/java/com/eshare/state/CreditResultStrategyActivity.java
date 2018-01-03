@@ -1,13 +1,15 @@
 package com.eshare.state;
 
 /**
- * 决策点2节点
+ * 授信结果决策节点
  * Created by liangyh on 2018/1/4.
  * Email:10856214@163.com
  */
-public class CreditStrategySecondActivity implements Activity {
+public class CreditResultStrategyActivity implements Activity {
     public void process(FlowContext sm) {
-        System.out.println("进入决策点2节点");
+        System.out.println("进入授信结果决策节点");
+        //执行业务逻辑
+        System.out.println("调用决策引擎,获取授信结果");
         //执行下一个状态
         sm.setActivity(new AuditOverActivity());
         sm.setVariables(null);

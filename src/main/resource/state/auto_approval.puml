@@ -1,0 +1,20 @@
+@startuml
+actor Client
+participant Context
+participant AuditStartActivity
+participant CreditStrategyFirstActivity
+participant CreditStrategySecondeActivity
+participant AuditOverActivity
+Client -> Context: 调用上下文去处理业务逻辑
+Context -> Context: 获取Activity对象
+Context -> AuditStartActivity: 委托AuditStartActivity状态对象去处理
+AuditStartActivity->AuditStartActivity:执行业务逻辑
+AuditStartActivity -> CreditStrategyFirstActivity:调用构造方法得到CreditStrategyFirstActivity状态对象实例
+CreditStrategyFirstActivity --> AuditStartActivity
+AuditStartActivity -> Context:设置下一个状态处理对象
+Context-> CreditStrategySecondeActivity: 委托CreditStrategySecondeActivity状态对象去处理
+CreditStrategySecondeActivity -> AuditOverActivity:调用构造方法得到AuditOverActivity状态对象实例
+AuditOverActivity--> CreditStrategySecondeActivity
+CreditStrategySecondeActivity -> Context:设置下一个状态处理对象
+Context->AuditOverActivity:委托AuditOverActivity状态对象去处理
+@enduml

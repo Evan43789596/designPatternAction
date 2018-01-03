@@ -1,7 +1,7 @@
 package com.eshare.state;
 
 /**
- * 状态机
+ * 流程上下文
  *
  * Created by liangyh on 2018/1/3.
  * Email:10856214@163.com

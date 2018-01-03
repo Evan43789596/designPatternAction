@@ -1,7 +1,7 @@
 package com.eshare.state;
 
 /**
- * 决策点1状态
+ * 决策点1节点
  * Created by liangyh on 2018/1/4.
  * Email:10856214@163.com
  */

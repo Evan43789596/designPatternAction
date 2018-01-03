@@ -7,7 +7,7 @@ package com.eshare.state;
  */
 public class CreditStrategyFirstActivity implements Activity {
     public void process(FlowContext sm) {
-        System.out.println("进入决策点1状态");
+        System.out.println("进入决策点1节点");
         //执行下一个状态
         sm.setActivity(new CreditStrategySecondActivity());
         sm.setVariables(null);

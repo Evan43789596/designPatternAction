@@ -7,12 +7,13 @@ package com.eshare.state;
  */
 public class CreditStrategyFirstActivity implements Activity {
     public void process(FlowContext sm) {
-        System.out.println("====>进入决策点1节点");
+        System.out.println("**** 进入决策点1节点 ****");
+        System.out.println("====>流程变量:"+sm.getVariables().toString());
         //处理业务逻辑
-        System.out.println("执行决策引擎，获取决策结果");
+        System.out.println("====>执行决策引擎，获取决策结果");
         //执行下一个状态
         sm.setActivity(new CreditResultStrategyActivity());
-        sm.setVariables(null);
         sm.process();
+        System.out.println("**** 退出进入决策点1节点 ****");
     }
 }

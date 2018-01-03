@@ -8,11 +8,11 @@ package com.eshare.state;
 public class AuditStartActivity implements Activity {
 
     public void process(FlowContext sm) {
-        System.out.println("====>进入开始节点");
+        System.out.println("**** 进入开始节点 ****");
+        System.out.println("====>流程变量:"+sm.getVariables().toString());
         //执行下一个状态
         sm.setActivity(new CreditStrategyFirstActivity());
-        sm.setVariables(null);
         sm.process();
-
+        System.out.println("**** 退出开始节点 ****");
     }
 }

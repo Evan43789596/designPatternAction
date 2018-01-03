@@ -9,7 +9,7 @@ public class Client {
     public static void main(String[] args){
         AutoApprovalFlowContext sm = new AutoApprovalFlowContext();
         sm.setActivity(new AuditStartActivity());
-        sm.setVariables("");
+        sm.setVariables("test1");
         sm.process();
     }
 }

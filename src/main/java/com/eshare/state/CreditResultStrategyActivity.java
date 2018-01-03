@@ -7,7 +7,7 @@ package com.eshare.state;
  */
 public class CreditResultStrategyActivity implements Activity {
     public void process(FlowContext sm) {
-        System.out.println("进入授信结果决策节点");
+        System.out.println("====>进入授信结果决策节点");
         //执行业务逻辑
         System.out.println("调用决策引擎,获取授信结果");
         //执行下一个状态
